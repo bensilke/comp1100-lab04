@@ -10,11 +10,26 @@ myPicture :: Picture
 myPicture = coordinatePlane & rectangle 2 2
 
 
-rectangle :: Double -> Double -> Picture
-rectangle l w 
 
-solidRectangle :: Double -> Double -> Picture
-solidRectangle 2 2
+myRectangle::Picture
+myRectangle = solidRectangle(2,2)
 
-myRectangle:: Picture
-myRectangle = solidRectangle 2 2
+
+myTranslated :: Picture
+myTranslated = translated(myRectangle,3,-2)
+
+
+colouredRectangle :: Picture
+colouredRectangle = coloured(Blue, myRectangle)
+
+
+logo :: Picture
+rectangleOne = coloured(Blue, translated(rectangle(1,1),2,2)
+rectangleTwo = coloured(Red, translated(rectangle(1,1),2,-2)
+rectangleThree = coloured(Yellow, translated(rectangle(1,1),-2,-2)
+rectangleFour = coloured(Green, translated(rectangle(1,1),-2,2)
+
+rotatedLogo :: Picture
+rotatedLogo = rotated(logo
+
+
